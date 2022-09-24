@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Word Shark</title>
+        <meta name="description" content="Phrase guessing game which has a theme of sharks.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <aside class="intro-section">
+            <section>
+                <div class="intro-title-wrapper">
+                    <img class="intro-title intro-title-word" src="./resources/word.png" alt="word">
+                    <img class="intro-title intro-title-word" src="./resources/shark.png" alt="shark">
+                </div>
+                <section>
+                    <button class="play-button">PLAY</button>
+                </section>
+            </section>
+        </aside>
+        
+        <main class="main-section">
+            <section>
+                <div class="main-title-wrapper">
+                    <img class="main-title main-title-word" src="./resources/word.png" alt="word">
+                    <img class="main-title main-title-shark" src="./resources/shark.png" alt="shark">
+                </div>
+            </section>
+
+            <section>
+                <div class="missed-score-wrapper">
+                    <span class="missed-score-title">GUESSES</span>
+                    <span class="missed-score">0</span>
+                </div>
+            </section>
+
+            <section>
+                <div class="phrase-wrapper">
+                    <!-- INSERT PHRASES HERE -->
+                    <!-- <div class="phrase-word">
+                        <div class="phrase-letter-wrapper">
+                            <span class="phrase-letter">T</span>
+                        </div>
+                        <div class="phrase-letter-wrapper">
+                            <span class="phrase-letter">h</span>
+                        </div>
+                        <div class="phrase-letter-wrapper">
+                            <span class="phrase-letter">i</span>
+                        </div>
+                        <div class="phrase-letter-wrapper">
+                            <span class="phrase-letter">s</span>
+                        </div>
+                        <div class="phrase-space-wrapper">
+                            <span class="phrase-space">&#160;</span>
+                        </div>
+                    </div>
+                    <div class="phrase-word">
+                        <div class="phrase-letter-wrapper">
+                            <span class="phrase-letter">i</span>
+                        </div>
+                        <div class="phrase-letter-wrapper">
+                            <span class="phrase-letter">s</span>
+                        </div>
+                        <div class="phrase-space-wrapper">
+                            <span class="phrase-space">&#160;</span>
+                        </div>
+                    </div>
+                    <div class="phrase-word">
+                        <div class="phrase-letter-wrapper">
+                            <span class="phrase-letter">a</span>
+                        </div>
+                        <div class="phrase-letter-wrapper">
+                            <span class="phrase-letter">n</span>
+                        </div>
+                        <div class="phrase-space-wrapper">
+                            <span class="phrase-space">&#160;</span>
+                        </div>
+                    </div>
+                    <div class="phrase-word">
+                        <div class="phrase-letter-wrapper">
+                            <span class="phrase-letter">e</span>
+                        </div>
+                        <div class="phrase-letter-wrapper">
+                            <span class="phrase-letter">x</span>
+                        </div>
+                        <div class="phrase-letter-wrapper">
+                            <span class="phrase-letter">a</span>
+                        </div>
+                        <div class="phrase-letter-wrapper">
+                            <span class="phrase-letter">m</span>
+                        </div>
+                        <div class="phrase-letter-wrapper">
+                            <span class="phrase-letter">p</span>
+                        </div>
+                        <div class="phrase-letter-wrapper">
+                            <span class="phrase-letter">l</span>
+                        </div>
+                        <div class="phrase-letter-wrapper">
+                            <span class="phrase-letter">e</span>
+                        </div>
+                        <div class="phrase-punctuation-wrapper">
+                            <span class="phrase-punctuation">&#33;</span>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+
+            <section>
+                <div class="keyboard-wrapper">
+                    <div class="key-row">
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">A</span>
+                            <!-- <div class="keyboard-key-overlay"></div> -->
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">B</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">C</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">D</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">E</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">F</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">G</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="keyboard-wrapper">
+                    <div class="key-row">
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">H</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">I</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">J</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">K</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">L</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">M</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">N</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="keyboard-wrapper">
+                    <div class="key-row">
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">O</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">P</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">Q</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">R</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">S</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">T</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">U</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="keyboard-wrapper">
+                    <div class="key-row last-key-row">
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">V</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">W</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">X</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">Y</span>
+                        </div>
+                        <div class="key-wrapper">
+                            <span class="keyboard-key">Z</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <button class="reset-button">RESET</button>
+            </section>
+
+            <!-- <aside class="shark-slider"> -->
+            <img class="shark-head" src="./resources/shark_head.png" alt="shark outline">
+            <!-- </aside> -->
+        </main>
+
+        <aside class="finish-section">
+            <div class="finish-wrapper">
+                <img class="end-shark" src="./resources/end_shark.png" alt="picture of shark standing awkarding">
+                <div class="finish-message-wrapper">
+                    <h2 class="finish-message">You got them all right!</h2>
+                    <h2 class="finish-phrase-answer-message">The phrase was:</h2>
+                    <h2 class="finish-phrase-answer">This is an example phrase</h2>
+                    <button class="end-close-button">CLOSE</button>
+                </div>
+            </div>
+        </aside>
+        
+        <script type="module" src="./index.js" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --custom-purple: #a468ee;
+    --custom-dark-blue:#031690;
+    --custom-light-blue:#05beea; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    display: grid;
+    place-content: center;
+}
+
+/* INTRO SECTION
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.intro-section {
+    position: fixed;
+    top: 0; bottom: 0; right: 0; left: 0;
+    background-image: linear-gradient(var(--custom-dark-blue), 30%, black);
+    transition: left .3s;
+    z-index: 1;
+    display:grid;
+    place-content: center;
+}
+
+.intro-title-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95vw;
+}
+
+.intro-title {
+    width: 50vw;
+    min-width: 200px;
+    max-width: 300px;
+    margin: 10px 0;
+}
+
+.play-button {
+    color: lightgrey;
+    font-size: 1.25rem;
+    background:none;
+    border: none;
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    font-weight: 300;
+    transition: color .3s, box-shadow .2s;
+    margin-top: 20px;
+}
+
+.play-button:hover {
+    font-weight: 700;
+    box-shadow: 0 0 3px 1px var(--custom-purple);
+    color: var(--custom-light-blue);
+}
+
+.play-button:active {
+    color: var(--custom-purple);
+}
+
+/* MAIN SECTION
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.main-section {
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-image: linear-gradient(
+        var(--custom-purple), 10%, 
+        var(--custom-light-blue), 20%,
+        var(--custom-dark-blue), 60%,
+        black)
+}
+
+.main-title-wrapper {
+    display: flex;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.main-title {
+    width: 45vw;
+    max-width: 200px;
+}
+
+.main-title-word {
+    transform: rotate(-2deg);
+}
+
+.main-title-shark {
+    transform: rotate(-2deg);
+}
+
+/* MISSED SCORE SECTION
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.missed-score-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: var(--custom-dark-blue);
+}
+
+.missed-score-title {
+    font-size: .75rem;
+    color: var(--custom-purple);
+}
+
+.missed-score {
+    font-size: 2.5rem;
+    color: var(--custom-purple);
+}
+
+/* PHRASE SECTION
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.phrase-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95vw;
+    max-width: 900px;
+}
+
+.phrase-word {
+    display: flex;
+    justify-content: center;
+}
+
+.phrase-letter-wrapper {
+    margin: 10px 2px;
+    width: 35px;
+    height: 35px;
+    border-bottom: 1px solid var(--custom-light-blue);
+    display: grid;
+    place-content: center;
+}
+
+.phrase-space-wrapper {
+    margin: 10px 2px;
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-content: center;
+}
+
+.phrase-punctuation-wrapper {
+    margin: 10px 10px;
+    width: max-content;
+    height: 35px;
+    display: grid;
+    place-content: center;
+}
+
+.phrase-letter,
+.phrase-space,
+.phrase-punctuation {
+    font-size: 2rem;
+    color: var(--custom-purple);
+    font-weight: 400;
+}
+
+.phrase-letter {
+    display: none;
+}
+
+/* KEYBOARD SECTION
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.keyboard-wrapper {
+    width: 95vw;
+    max-width: 450px;
+}
+
+.key-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.last-key-row {
+    justify-content: space-around;
+}
+
+.key-wrapper {
+    display: grid;
+    place-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-color: var(--custom-purple);
+    cursor: pointer;
+    position: relative;
+}
+
+.key-wrapper:hover {
+    box-shadow: inset 0 0 3px 1px var(--custom-dark-blue);
+}
+
+.key-wrapper:active {
+    box-shadow: inset 0 0 3px 1px var(--custom-light-blue);
+}
+
+.keyboard-key {
+    font-size: 1.75rem;
+}
+
+.keyboard-key-overlay-correct {
+    background-image: linear-gradient(#1a7c0b75, #1a7c0b75);
+    /* background-image: linear-gradient(#c9160060, #c9160060); */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.keyboard-key-overlay-wrong {
+    /* background-image: linear-gradient(#1a7c0b60, #1a7c0b60); */
+    background-image: linear-gradient(#c9160075, #c9160075);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 450px) {
+    .key-wrapper {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* RESET SECTION
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.reset-button {
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    color: lightgrey;
+    background:none;
+    border:none;
+    border-radius: 10px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: border .1s, color .3s;
+}
+
+.reset-button:hover {
+    color: var(--custom-light-blue);
+    font-weight: 500;
+}
+
+.reset-button:active {
+    border: 1px solid var(--custom-light-blue)
+}
+
+/* SHARK SLIDER SECTION
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.shark-head {
+    position: absolute;
+    top:95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 95vw;
+    max-width: 600px;
+    transition: top 1s;
+}
+
+/* FINISH SECTION
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.finish-section {
+    /* display: grid; */
+    place-content: center;
+    position: fixed;
+    top:0; bottom:0; left:0; right:0;
+    background-image: linear-gradient( #a468ee,#a468ee20);
+    display: none;
+}
+
+.end-shark {
+    width: 95vw;
+    max-width:400px;
+}
+
+.finish-message-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgb(3, 22, 144, .7),rgb(3, 22, 144, .7));
+    padding: 0 30px; 
+    border-radius: 50px;
+}
+
+.finish-message, 
+.finish-phrase-answer,
+.finish-phrase-answer-message {
+    color: white;
+    text-align:center;
+    font-weight: 300;
+}
+
+.finish-message {
+    margin-top: 30px;
+}
+
+.finish-phrase-answer-message {
+    font-size: .75rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.finish-phrase-answer {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.end-close-button {
+    padding: 5px 10px;
+    border: none;
+    background-color: var(--custom-purple);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    color: var(--custom-dark-blue);
+    cursor: pointer;
+}
+
+.end-close-button:hover {
+    box-shadow: 0 0 5px 2px white;
+}
+
+.end-close-button:active {
+    color: var(--custom-light-blue);
+}
