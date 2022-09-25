@@ -186,7 +186,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 .keyboard-wrapper {
     width: 95vw;
-    max-width: 450px;
+    max-width: 550px;
 }
 
 .key-row {
@@ -202,8 +202,10 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 .key-wrapper {
     display: grid;
     place-content: center;
-    height: 50px;
-    width: 50px;
+    width: 12vw;
+    height: 12vw;
+    max-height: 70px;
+    max-width: 70px;
     border-radius: 10px;
     background-color: var(--custom-purple);
     cursor: pointer;
@@ -238,13 +240,6 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     width: 100%;
     position: absolute;
     border-radius: 10px;
-}
-
-@media only screen and (max-width: 450px) {
-    .key-wrapper {
-        width: 45px;
-        height: 45px;
-    }
 }
 
 /* RESET SECTION
