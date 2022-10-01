@@ -190,6 +190,8 @@ const handleKeyClick = (event) => {
     }else {
         handleGuess(event.target.innerText);
     }
+
+    return false;
 }
 
 for(let i=0; i<keyWrappers.length; i++) {
