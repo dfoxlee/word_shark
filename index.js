@@ -188,10 +188,9 @@ const handleKeyClick = (event) => {
     }else if(!alphabet.includes(event.target.innerText)) {
         return;
     }else {
+        event.preventDefault();
         handleGuess(event.target.innerText);
     }
-
-    return false;
 }
 
 for(let i=0; i<keyWrappers.length; i++) {
